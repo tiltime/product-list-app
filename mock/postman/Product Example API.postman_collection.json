@@ -1,0 +1,276 @@
+{
+	"info": {
+		"_postman_id": "ecc63b0d-515f-4649-a3f7-37583c98e0b7",
+		"name": "Product Example API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "api/product/",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/api/product/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"product",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/api/product/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"product",
+								""
+							]
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "[\n    { \n    \"id\": 1,\n    \"name\": \"b0006se5bq\", \n    \"number\": \"singing coach unlimited\", \n    \"description\": \"singing coach unlimited - electronic learning products (win me nt 2000 xp)\",  \n    \"images\": [ \n        { \n            \"url\": \"http://lorempixel.com/200/200/technics/\", \n            \"name\": \"singing coach\"\n        }, \n        { \n            \"url\": \"http://lorempixel.com/200/200/abstract/\", \n            \"name\": \"front side\"\n        }\n    ]},\n    { \n    \"id\": 2,    \n    \"name\": \"b00021xhzw\", \n    \"number\": \"adobe after effects professional 6.5 upgrade from standard to professional\", \n    \"description\": \"upgrade only; installation of after effects standard new disk caching tools speed up your interactive work save any combination of animation parameters as presets\", \n    \"images\": []  \n    },\n    { \n    \"id\": 3,    \n    \"name\": \"b00021xhzw\", \n    \"number\": \"domino designer/developer v5.0\", \n    \"description\": \"reference domino designer/developer r5 doc pack includes the following titles: application development with domino designer (intermediate-advanced) 536 pages it explains building applications creating databases using forms fields views folders navi\", \n    \"images\": [\n        { \n        \"url\": \"http://lorempixel.com/200/200/people/\", \n        \"name\": \"cover\"\n        }]\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "api/product/1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/api/product/{{id}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"product",
+						"{{id}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/api/product/{{id}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"product",
+								"{{id}}"
+							]
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{ \n    \"id\": 1,\n    \"name\": \"b0006se5bq\", \n    \"number\": \"singing coach unlimited\", \n    \"description\": \"singing coach unlimited - electronic learning products (win me nt 2000 xp)\",  \n    \"images\": [ \n        { \n            \"url\": \"http://lorempixel.com/200/200/technics/\", \n            \"name\": \"singing coach\"\n        }, \n        { \n            \"url\": \"http://lorempixel.com/200/200/abstract/\", \n            \"name\": \"front side\"\n        }]\n}"
+				}
+			]
+		},
+		{
+			"name": "api/product/2",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/api/product/{{id}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"product",
+						"{{id}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/api/product/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"product",
+								"2"
+							]
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{ \n    \"id\": 2,    \n    \"name\": \"b00021xhzw\", \n    \"number\": \"adobe after effects professional 6.5 upgrade from standard to professional\", \n    \"description\": \"upgrade only; installation of after effects standard new disk caching tools speed up your interactive work save any combination of animation parameters as presets\", \n    \"images\": []  \n}"
+				}
+			]
+		},
+		{
+			"name": "api/product/3",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/api/product/{{id}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"product",
+						"{{id}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/api/product/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"product",
+								"2"
+							]
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{ \n    \"id\": 3,    \n    \"name\": \"b00021xhzw\", \n    \"number\": \"domino designer/developer v5.0\", \n    \"description\": \"reference domino designer/developer r5 doc pack includes the following titles: application development with domino designer (intermediate-advanced) 536 pages it explains building applications creating databases using forms fields views folders navi\", \n    \"images\": [\n        { \n        \"url\": \"http://lorempixel.com/200/200/people/\", \n        \"name\": \"cover\"\n        }]\n}"
+				}
+			]
+		},
+		{
+			"name": "api/product/{{id}}",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/api/product/{{id}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"product",
+						"{{id}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/api/product/{{id}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"product",
+								"{{id}}"
+							]
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": ""
+				}
+			]
+		}
+	]
+}
