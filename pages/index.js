@@ -1,29 +1,38 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import Layout from '../components/layout'
+import ProductList from '../components/product-list'
+import list from '../api/mock-api'
 
-class Index extends React.Component {
-  static getInitialProps ({ reduxStore, req }) {
+import { fetchProductList } from '../store';
 
-    return {}
-  }
+class Index extends Component {
+    static getInitialProps ({ reduxStore, req }) {
+        reduxStore.dispatch(fetchProductList()) 
+        return {}
+    }
 
-  componentDidMount () {
-
-  }
-
-  componentWillUnmount () {
-
-  }
-
+    componentDidMount () {
+      this.props.fetchProductList()
+    }
+  
   render () {
-    return (
-      <Layout>
-      </Layout>)
+      return (
+          <Layout>
+            <ProductList data={this.props.dataList}></ProductList>
+          </Layout>
+      )
   }
 }
-const mapDispatchToProps = {}
+
+const mapDispatchToProps = { fetchProductList }
+
+function mapStateToProps (state) {
+  const { dataList } = state
+  return { dataList }
+}
+
 export default connect(
-  null,
-  mapDispatchToProps
+    mapStateToProps,
+    mapDispatchToProps
 )(Index)
