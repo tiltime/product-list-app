@@ -2,8 +2,6 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import Layout from '../components/layout'
 import ProductList from '../components/product-list'
-import list from '../api/mock-api'
-
 import { fetchProductList } from '../store';
 
 class Index extends Component {

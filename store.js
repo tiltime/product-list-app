@@ -4,7 +4,8 @@ import { composeWithDevTools } from 'redux-devtools-extension'
 import axios from 'axios'
 
 const initialState = {
-  dataList: []
+    dataList: [],
+    product: {}
 }
 
 const api = axios.create({
@@ -13,17 +14,23 @@ const api = axios.create({
 
 export const FETCH_PRODUCT_LIST_SUCCESS = 'FETCH_PRODUCT_LIST_SUCCESS'
 export const FETCH_PRODUCT_LIST_FAILURE = 'FETCH_PRODUCT_LIST_FAILURE'
+export const FETCH_PRODUCT_SUCCESS = 'FETCH_PRODUCT_SUCCESS'
+export const FETCH_PRODUCT_FAILURE = 'FETCH_PRODUCT_FAILURE'
 
 // REDUCERS
 export const reducer = (state = initialState, action) => {
-  switch (action.type) {
-    case FETCH_PRODUCT_LIST_SUCCESS:
-      return Object.assign({}, state, {
-        dataList: action.data
-      })
-    default:
-      return state
-  }
+    switch (action.type) {
+        case FETCH_PRODUCT_LIST_SUCCESS:
+            return Object.assign({}, state, {
+              dataList: action.data
+            })
+        case FETCH_PRODUCT_SUCCESS:
+            return Object.assign({}, state, {
+              product: action.data
+            })  
+        default:
+            return state
+    }
 }
 
 // ACTIONS
@@ -36,10 +43,21 @@ export const fetchProductList = () => async dispatch => {
   }
 }
 
+export const fetchProduct = (id) => async dispatch => {
+  try {
+      const { data }  = await api.get('/product/'+id)
+      console.log(data)
+      dispatch({ type: FETCH_PRODUCT_SUCCESS, data })
+  } catch (err) {
+      console.log(err.msg)
+      dispatch({ type: FETCH_PRODUCT_FAILURE, err})
+  }
+}
+
 export function initializeStore (initialState = initialState) {
-  return createStore(
-    reducer,
-    initialState,
-    composeWithDevTools(applyMiddleware(thunk))
-  )
+    return createStore(
+        reducer,
+        initialState,
+        composeWithDevTools(applyMiddleware(thunk))
+    )
 }
