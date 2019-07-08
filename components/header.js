@@ -1,11 +1,11 @@
-import Link from 'next/link';
+import { Link } from '../routes';
 
 const linkStyle = {
     marginRight: 15
 };
 const Header = () => (
   <div>
-    <Link href="/">
+    <Link to="/">
         <a style={linkStyle}>Index Page</a>
     </Link>
   </div>

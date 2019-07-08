@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import Link from 'next/link'
+import { Link } from '../routes'
 
 const ProductListItem = styled.li`
     list-style: none;
@@ -17,17 +17,17 @@ const ProductLink = styled.a`
     }
 `
 
-const ProductItem = ({item}) => {
+const ProductItem = ({ item }) => {
     if (!item) return (<div/>)
     return (
         <ProductListItem key={item.id}>
-            <Link as={`/product/${item.id}`} href={`/product?id=${item.id}`}>
+            <Link to={`/product/${item.id}`}>
                 <ProductLink>{item.name} - {item.number}</ProductLink>
             </Link>
         </ProductListItem>
     )
 };
-const ProductList = ({data}) => {
+const ProductList = ({ data }) => {
     if (!data) return (<div/>)
     return (
         Object.keys(data).map((obj, i) => {
