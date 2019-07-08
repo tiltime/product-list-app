@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import Layout from '../components/layout'
 import ProductList from '../components/product-list'
-import { fetchProductList } from '../store';
+import { fetchProductList } from '../action';
 
 class Index extends Component {
     static getInitialProps ({ reduxStore, req }) {

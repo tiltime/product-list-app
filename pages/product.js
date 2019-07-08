@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import Link from 'next/link'
 import styled from 'styled-components'
 import Layout from '../components/layout.js'
-import { fetchProduct } from '../store'
+import { fetchProduct } from '../action'
 import ProductDetail from '../components/product-detail.js'
 
 class Product extends React.Component {
