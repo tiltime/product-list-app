@@ -8,9 +8,6 @@ const Header = () => (
     <Link href="/">
         <a style={linkStyle}>Index Page</a>
     </Link>
-    <Link href="/about">
-        <a style={linkStyle}>About Page</a>
-    </Link>
   </div>
 );
 
