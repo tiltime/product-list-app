@@ -1,24 +1,23 @@
 import React from 'react'
-import { withRouter } from 'next/router';
+import { withRouter } from 'next/router'
 import { connect } from 'react-redux'
-import Layout from '../components/layout.js';
+import Link from 'next/link'
+import styled from 'styled-components'
+import Layout from '../components/layout.js'
 import { fetchProduct } from '../store'
+import ProductDetail from '../components/product-detail.js'
 
 class Product extends React.Component {
     static async getInitialProps ({ reduxStore, query }) {
         reduxStore.dispatch(fetchProduct(query.id)) 
-        console.log(query.id)
         return {}
     }
 
-    render (){
-        // console.log(this.props.product)
+    render() {
+        const product = this.props.product
         return(
-            
             <Layout>
-                <h1>{this.props.product.id}</h1>
-                <p>{this.props.product.name}</p>
-                <p>This is the blog post content.</p>
+                <ProductDetail product={product}></ProductDetail>
             </Layout>
         )
     }
