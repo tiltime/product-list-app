@@ -16,7 +16,7 @@ const initialState = {
 }
 
 // REDUCERS
-// Need to reactor 
+// Need to refactor to use combineStore()
 export const reducer = (state = initialState, action) => {
     switch (action.type) {
         case FETCH_PRODUCT_LIST_SUCCESS:

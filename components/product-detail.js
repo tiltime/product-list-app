@@ -4,12 +4,15 @@ const ProductImg = styled.img`
     padding-right: 5px
 `
 
-const Image = ({ items }) => {
-    if (!items) return (<div/>)
+const Image = ({ images }) => {
+    if (!images) return (<div/>)
     return (
-        Object.keys(items).map((obj, i) => {
+        images.map((image, i) => {
             return (
-                <ProductImg key={i} src={items[obj].url} alt={items[obj].name}/>
+                <div key={i}>
+                    <ProductImg src={image.url} alt={image.name}/>
+                    <span>{image.name}</span>
+                </div>
             )
         })
     )
@@ -23,7 +26,7 @@ const ProductDetail = ({ product }) => {
             <span>{product.number}</span>
             <p>{product.description}</p>
             <div>
-                <Image items={product.images}></Image>
+                <Image images={product.images}></Image>
             </div>
         </div>
     )

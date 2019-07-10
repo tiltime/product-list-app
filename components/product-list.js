@@ -21,7 +21,7 @@ const ProductItem = ({ item }) => {
     if (!item) return (<div/>)
     return (
         <ProductListItem key={item.id}>
-            <Link to={`/product/${item.id}`}>
+            <Link route='product' params={{id: item.id}}>
                 <ProductLink>{item.name} - {item.number}</ProductLink>
             </Link>
         </ProductListItem>
@@ -30,9 +30,9 @@ const ProductItem = ({ item }) => {
 const ProductList = ({ data }) => {
     if (!data) return (<div/>)
     return (
-        Object.keys(data).map((obj, i) => {
+        data.map((product, i) => {
             return (
-                <ProductItem key={i} item={data[obj]}></ProductItem>
+                <ProductItem key={i} item={product}></ProductItem>
             )
         })
     )
