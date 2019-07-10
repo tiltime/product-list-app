@@ -1,4 +1,3 @@
-import { Link } from '../routes'
 import styled from 'styled-components'
 
 const ProductImg = styled.img`
@@ -27,9 +26,6 @@ const ProductDetail = ({ product }) => {
             <div>
                 <Image items={product.images}></Image>
             </div>
-            <Link to={`/product/${product.id}/edit`}>
-                <button>Edit</button>
-            </Link>
         </div>
     )
 }
