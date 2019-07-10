@@ -15,3 +15,17 @@ export const ErrorSpan = styled.span`
 export const Button = styled.button`
     margin-right: 5px;
 `
+export const ProductListItem = styled.li`
+    list-style: none;
+    margin: 5px 0;
+`
+
+export const ProductLink = styled.a`
+     text-decoration: none;
+        color: blue;
+        font-family: 'Arial';
+    } 
+    &:hover {
+        opacity: 0.6;
+    }
+`

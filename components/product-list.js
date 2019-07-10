@@ -1,21 +1,6 @@
 import React, { Component } from 'react'
-import styled from 'styled-components'
+import { ProductListItem, ProductLink } from '../styled-css/product'
 import { Link } from '../routes'
-
-const ProductListItem = styled.li`
-    list-style: none;
-    margin: 5px 0;
-`
-
-const ProductLink = styled.a`
-     text-decoration: none;
-        color: blue;
-        font-family: 'Arial';
-    } 
-    &:hover {
-        opacity: 0.6;
-    }
-`
 
 const ProductItem = ({ item }) => {
     if (!item) return (<div/>)
