@@ -12,10 +12,10 @@ const ProductItem = ({ item }) => {
         </ProductListItem>
     )
 };
-const ProductList = ({ data }) => {
-    if (!data) return (<div/>)
+const ProductList = ({ products }) => {
+    if (!products) return (<div/>)
     return (
-        data.map((product, i) => {
+        products.map((product, i) => {
             return (
                 <ProductItem key={i} item={product}></ProductItem>
             )

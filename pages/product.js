@@ -1,10 +1,9 @@
 import React from 'react'
-import ReactDOM from 'react-dom';
 import { connect } from 'react-redux'
 import Modal from 'react-modal'
 import Layout from '../components/layout.js'
-import { fetchProduct, updateProduct, openModal, closeModal } from '../action'
-import ProductDetail from '../components/product-detail.js'
+import { fetchProduct, updateProduct, openModal, closeModal } from '../actions'
+import ProductDetail from '../components/product-detail'
 import EditProductForm from '../components/product-edit'
 import { Button } from '../styled-css/product'
 

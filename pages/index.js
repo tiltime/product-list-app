@@ -2,27 +2,28 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import Layout from '../components/layout'
 import ProductList from '../components/product-list'
-import { fetchProductList } from '../action';
+import { fetchProducts } from '../actions';
 
 class Index extends Component {
     componentDidMount () {
-        this.props.fetchProductList()
+        this.props.fetchProducts()
     }
   
     render () {
+        const products  = this.props.products
         return (
             <Layout>
-                <ProductList data={this.props.dataList}></ProductList>
+                <ProductList products={products}></ProductList>
             </Layout>
         )
     }
 }
 
-const mapDispatchToProps = { fetchProductList }
+const mapDispatchToProps = { fetchProducts }
 
 function mapStateToProps (state) {
-    const { dataList } = state
-    return { dataList }
+    const { products } = state
+    return { products }
 }
 
 export default connect(
