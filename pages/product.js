@@ -5,7 +5,7 @@ import Modal from 'react-modal'
 import Layout from '../components/layout.js'
 import { fetchProduct, updateProduct, openModal, closeModal } from '../action'
 import ProductDetail from '../components/product-detail.js'
-import EditProductForm from '../components/edit'
+import EditProductForm from '../components/product-edit'
 
 const modalStyles = {
     content : {
@@ -23,7 +23,7 @@ Modal.setAppElement('#root')
 
 class Product extends React.Component {
     static async getInitialProps ({ reduxStore, query }) {
-        reduxStore.dispatch(fetchProduct(query.id)) 
+        reduxStore.dispatch(fetchProduct(query.id))
         return {}
     }
 
