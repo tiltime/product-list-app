@@ -15,10 +15,10 @@ To run application
 npm run dev
 ```
 
-## Running the tests
+To run test
 
 ```
-npm run test
+npm test
 ```
 
 ## Mocking API
@@ -29,6 +29,6 @@ Please follow instruction in [here](https://learning.getpostman.com/docs/postman
 
 
 #Note
-1. I'm not sure `you are not expected to implement Delete or Create functionalities` in the assignment means we don't need to do upload/delete image or not so I just added edit form do existing images in array in sample data you provided. 
+1. I'm not sure what `you are not expected to implement Delete or Create functionalities` in the assignment means we don't need to do upload/delete image or not so I just added edit form edit existing images url and name in array in sample data you provided. 
 2. No serverside rendering
-
+3. add more tests

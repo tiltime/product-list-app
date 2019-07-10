@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "next",
+    "test": "jest",
     "build": "next build",
     "start": "next start"
   },
@@ -22,6 +23,12 @@
   },
   "license": "ISC",
   "devDependencies": {
-    "express": "^4.17.1"
+    "@babel/core": "7.3.4",
+    "babel-jest": "24.1.0",
+    "enzyme": "3.4.3",
+    "enzyme-adapter-react-16": "1.2.0",
+    "jest": "24.1.0",
+    "react-addons-test-utils": "15.6.2",
+    "react-test-renderer": "16.4.2"
   }
 }
