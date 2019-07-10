@@ -14,6 +14,9 @@ const ErrorSpan = styled.span`
     margin-left: 5px;
     color: red;
 `
+const Button = styled.button`
+    margin-right: 5px;
+`
 
 const EditProductForm = ({product, updateProduct, onClose}) => {
 return (
@@ -49,15 +52,15 @@ return (
                 </Row>
                 <Row>
                     <Label>Description</Label>
-                    <Field type="input" name="description" component="textarea" />
+                    <Field type="text" name="description" component="textarea" />
                 </Row>
                 <Row>
-                    <button type="submit" disabled={isSubmitting}>
+                    <Button type="submit" disabled={isSubmitting}>
                     Submit
-                    </button>
-                    <button type="button" onClick={onClose}>
+                    </Button>
+                    <Button type="button" onClick={onClose}>
                     Cancel
-                    </button>
+                    </Button>
                 </Row>
                 </Form>
             )}

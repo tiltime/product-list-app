@@ -19,7 +19,7 @@ export const fetchProductList = () => async dispatch => {
         const { data }  = await api.get('/product/')
         dispatch({ type: FETCH_PRODUCT_LIST_SUCCESS, data })
     } catch (err) {
-        dispatch({ type: FFETCH_PRODUCT_LIST_FAILURE, err})
+        dispatch({ type: FFETCH_PRODUCT_LIST_FAILURE, err })
     }
 }
 
@@ -29,7 +29,7 @@ export const fetchProduct = (id) => async dispatch => {
         dispatch({ type: FETCH_PRODUCT_SUCCESS, data })
     } catch (err) {
         console.log(err.msg)
-        dispatch({ type: FETCH_PRODUCT_FAILURE, err})
+        dispatch({ type: FETCH_PRODUCT_FAILURE, err })
     }
 }
 
