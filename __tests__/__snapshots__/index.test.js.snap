@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`With Snapshot Testing Render Product Item 1`] = `
+Array [
+  <li
+    className="sc-ifAKCX haqxAK"
+  >
+    <a
+      className="sc-bZQynM bEwXTb"
+      onClick={[Function]}
+    >
+      b00021xhzw
+       - 
+      adobe after effects professional 6.5 upgrade from standard to professional
+    </a>
+  </li>,
+  <li
+    className="sc-ifAKCX haqxAK"
+  >
+    <a
+      className="sc-bZQynM bEwXTb"
+      onClick={[Function]}
+    >
+      b00021xhzw
+       - 
+      domino designer/developer v5.0
+    </a>
+  </li>,
+]
+`;
+
+exports[`With Snapshot Testing Render ProductDetail 1`] = `
+<div>
+  <h1>
+    b00021xhzw
+  </h1>
+  <span>
+    domino designer/developer v5.0
+  </span>
+  <p>
+    reference domino designer/developer r5 doc pack includes the following titles: application development with domino designer (intermediate-advanced) 536 pages it explains building applications creating databases using forms fields views folders navi
+  </p>
+  <div>
+    <div>
+      <img
+        alt="cover"
+        className="sc-EHOje gZcETi"
+        src="http://lorempixel.com/200/200/people/"
+      />
+      <span>
+        cover
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`With Snapshot Testing Render ProductItem 1`] = `
+Array [
+  <li
+    className="sc-ifAKCX haqxAK"
+  >
+    <a
+      className="sc-bZQynM bEwXTb"
+      onClick={[Function]}
+    >
+      b00021xhzw
+       - 
+      adobe after effects professional 6.5 upgrade from standard to professional
+    </a>
+  </li>,
+  <li
+    className="sc-ifAKCX haqxAK"
+  >
+    <a
+      className="sc-bZQynM bEwXTb"
+      onClick={[Function]}
+    >
+      b00021xhzw
+       - 
+      domino designer/developer v5.0
+    </a>
+  </li>,
+]
+`;
