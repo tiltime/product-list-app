@@ -10,6 +10,10 @@ const Row = styled.div`
     display: block;
     margin: 5px 0;
 `
+const ErrorSpan = styled.span`
+    margin-left: 5px;
+    color: red;
+`
 
 const EditProductForm = ({product, updateProduct, onClose}) => {
 return (
@@ -36,12 +40,12 @@ return (
                 <Row>
                     <Label>Name</Label>
                     <Field type="text" name="name" />
-                    <ErrorMessage name="name" component="div" className="error" />
+                    <ErrorMessage name="name" component={ErrorSpan} />
                 </Row>
                 <Row>
                     <Label>Number</Label>
                     <Field type="text" name="number" />
-                    <ErrorMessage name="number" component="div" className="error" />
+                    <ErrorMessage name="number" component={ErrorSpan} />
                 </Row>
                 <Row>
                     <Label>Description</Label>
