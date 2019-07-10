@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { connect } from 'react-redux'
 import Modal from 'react-modal'
 import Layout from '../components/layout.js'
-import { fetchProduct, updateProduct } from '../action'
+import { fetchProduct, updateProduct, openModal, closeModal } from '../action'
 import ProductDetail from '../components/product-detail.js'
 import EditProductForm from '../components/edit'
 
@@ -27,54 +27,29 @@ class Product extends React.Component {
         return {}
     }
 
-    constructor() {
-        super();
-    
-        this.state = {
-          modalIsOpen: false
-        };
-    
-        this.openModal = this.openModal.bind(this);
-        this.afterOpenModal = this.afterOpenModal.bind(this);
-        this.closeModal = this.closeModal.bind(this);
-    }
-    
-    openModal() {
-        this.setState({modalIsOpen: true});
-    }
-    
-    afterOpenModal() {
-        // references are now sync'd and can be accessed.
-    }
-    
-    closeModal() {
-        this.setState({modalIsOpen: false});
-    }
-
     render() {
         const product = this.props.product
         return(
             <Layout>
                 <ProductDetail product={product}></ProductDetail>
-                <button onClick={this.openModal}>Edit</button>
+                <button onClick={this.props.openModal}>Edit</button>
                 <Modal
-                    isOpen={this.state.modalIsOpen}
-                    onAfterOpen={this.afterOpenModal}
-                    onRequestClose={this.closeModal}
+                    isOpen={this.props.modalIsOpen}
+                    onRequestClose={this.props.closeModal}
                     style={modalStyles}
                     contentLabel="Example Modal">
-                        <EditProductForm product={product} updateProduct= {this.props.updateProduct} onClose={this.closeModal}></EditProductForm>
+                        <EditProductForm product={product} updateProduct={this.props.updateProduct} onClose={this.props.closeModal}></EditProductForm>
                 </Modal>
             </Layout>
         )
     }
 }
 
-const mapDispatchToProps = { fetchProduct, updateProduct }
+const mapDispatchToProps = { fetchProduct, updateProduct, openModal, closeModal  }
 
 function mapStateToProps (state) {
-  const { product } = state
-  return { product }
+  const { product, modalIsOpen } = state
+  return { product, modalIsOpen }
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Product)

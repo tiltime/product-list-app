@@ -4,9 +4,11 @@ import { Formik, Form, Field, ErrorMessage } from 'formik'
 
 const Label = styled.label`
     margin-right: 5px;
+    width: 100px;
 `
 const Row = styled.div`
     display: block;
+    margin: 5px 0;
 `
 
 const EditProductForm = ({product, updateProduct, onClose}) => {

@@ -7,14 +7,17 @@
     "start": "next start"
   },
   "dependencies": {
+    "formik": "^1.5.7",
     "next": "^8.1.0",
     "next-routes": "^1.4.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-modal": "^3.8.2",
     "react-redux": "^5.0.1",
     "redux": "^3.6.0",
     "redux-devtools-extension": "^2.13.2",
-    "styled-components": "^4.3.2"
+    "styled-components": "^4.3.2",
+    "yup": "^0.27.0"
   },
   "license": "ISC",
   "devDependencies": {

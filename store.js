@@ -1,28 +1,44 @@
 import { createStore, applyMiddleware } from 'redux'
 import thunk from 'redux-thunk'
 import { composeWithDevTools } from 'redux-devtools-extension'
-import {FETCH_PRODUCT_LIST_SUCCESS, FETCH_PRODUCT_SUCCESS, UPDATE_PRODUCT_SUCCESS} from './action/index'
+import {
+  FETCH_PRODUCT_LIST_SUCCESS, 
+  FETCH_PRODUCT_SUCCESS, 
+  UPDATE_PRODUCT_SUCCESS,
+  OPEN_MODAL,
+  CLOSE_MODAL
+ } from './action/'
 
 const initialState = {
     dataList: [],
-    product: {}
+    product: {},
+    modalIsOpen: false
 }
 
 // REDUCERS
+// Need to reactor 
 export const reducer = (state = initialState, action) => {
     switch (action.type) {
         case FETCH_PRODUCT_LIST_SUCCESS:
             return Object.assign({}, state, {
-              dataList: action.data
+                dataList: action.data
             })
         case FETCH_PRODUCT_SUCCESS:
             return Object.assign({}, state, {
-              product: action.data
+                product: action.data
             })  
         case UPDATE_PRODUCT_SUCCESS:
             return Object.assign({}, state, {
-              product: action.data
-            })      
+                product: action.data
+            })
+        case OPEN_MODAL:
+            return Object.assign({}, state, {
+                modalIsOpen: true
+            })
+        case CLOSE_MODAL:
+            return Object.assign({}, state, {
+                modalIsOpen: false
+            })              
         default:
             return state
     }
