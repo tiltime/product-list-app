@@ -10,8 +10,6 @@ export const FETCH_PRODUCT_SUCCESS = 'FETCH_PRODUCT_SUCCESS'
 export const FETCH_PRODUCT_FAILURE = 'FETCH_PRODUCT_FAILURE'
 export const UPDATE_PRODUCT_SUCCESS = 'UPDATE_PRODUCT_SUCCESS'
 export const UPDATE_PRODUCT_FAILURE = 'UPDATE_PRODUCT_FAILURE'
-export const OPEN_MODAL = 'OPEN_MODAL'
-export const CLOSE_MODAL = 'CLOSE_MODAL'
 
 // ACTIONS
 export const fetchProducts = () => async dispatch => {
@@ -43,12 +41,4 @@ export const updateProduct = (id, data) => async dispatch => {
         console.log(err.msg)
         dispatch({ type: UPDATE_PRODUCT_FAILURE, err })
     }
-}
-
-export const openModal = (modalIsOpen) => dispatch => {
-    dispatch({ type: OPEN_MODAL, modalIsOpen })
-}
-
-export const closeModal = (modalIsOpen) => dispatch => {
-    dispatch({ type: CLOSE_MODAL, modalIsOpen })
 }

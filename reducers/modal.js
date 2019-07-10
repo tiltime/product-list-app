@@ -1,5 +1,5 @@
-import { OPEN_MODAL, CLOSE_MODAL } from '../actions/index'
-export const modalReducer = (state = false, action) => {
+import { OPEN_MODAL, CLOSE_MODAL } from '../actions/modal'
+const modalReducer = (state = false, action) => {
     switch (action.type) {
         case OPEN_MODAL:
             return true
