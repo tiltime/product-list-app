@@ -19,8 +19,7 @@ const ProductDetail = ({ product }) => {
     if (!product) return (<div/>)
     return (
         <div>
-            <h1>{product.id}</h1>
-            <h3>{product.name}</h3>
+            <h1>{product.name}</h1>
             <span>{product.number}</span>
             <p>{product.description}</p>
             <div>

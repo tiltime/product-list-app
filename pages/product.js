@@ -6,6 +6,7 @@ import Layout from '../components/layout.js'
 import { fetchProduct, updateProduct, openModal, closeModal } from '../action'
 import ProductDetail from '../components/product-detail.js'
 import EditProductForm from '../components/product-edit'
+import { Button } from '../styled-css/product'
 
 const modalStyles = {
     content : {
@@ -32,12 +33,12 @@ class Product extends React.Component {
         return(
             <Layout>
                 <ProductDetail product={product}></ProductDetail>
-                <button onClick={this.props.openModal}>Edit</button>
+                <Button onClick={this.props.openModal}>Edit</Button>
                 <Modal
                     isOpen={this.props.modalIsOpen}
                     onRequestClose={this.props.closeModal}
                     style={modalStyles}
-                    contentLabel="Example Modal">
+                    contentLabel="Edit Product Modal">
                         <EditProductForm product={product} updateProduct={this.props.updateProduct} onClose={this.props.closeModal}></EditProductForm>
                 </Modal>
             </Layout>
