@@ -1,8 +1,4 @@
-import axios from 'axios'
-
-const api = axios.create({
-    baseURL: 'https://68adda0f-b2f3-446b-b72c-45e5823ef4e0.mock.pstmn.io/api',
-});
+import { getProducts, getProduct, updateProductData } from '../api/api'
 
 export const FETCH_PRODUCTS_SUCCESS = 'FETCH_PRODUCTS_SUCCESS'
 export const FETCH_PRODUCTS_FAILURE = 'FETCH_PRODUCTS_FAILURE'
@@ -14,7 +10,7 @@ export const UPDATE_PRODUCT_FAILURE = 'UPDATE_PRODUCT_FAILURE'
 // ACTIONS
 export const fetchProducts = () => async dispatch => {
     try {
-        const { data }  = await api.get('/product/')
+        const { data }  = await getProducts()
         dispatch({ type: FETCH_PRODUCTS_SUCCESS, data })
     } catch (err) {
         console.log(err.msg)
@@ -24,7 +20,7 @@ export const fetchProducts = () => async dispatch => {
 
 export const fetchProduct = (id) => async dispatch => {
     try {
-        const { data }  = await api.get('/product/'+id)
+        const { data }  = await getProduct(id)
         dispatch({ type: FETCH_PRODUCT_SUCCESS, data })
     } catch (err) {
         console.log(err.msg)
@@ -34,8 +30,7 @@ export const fetchProduct = (id) => async dispatch => {
 
 export const updateProduct = (id, data) => async dispatch => {
     try {
-        // PUT METHOD Should work properly if you have API
-        api.put('/product/'+id, data, {headers: {'Content-Type': 'application/json'}})
+        updateProductData(id, data)
         dispatch({ type: UPDATE_PRODUCT_SUCCESS, data })
     } catch (err) {
         console.log(err.msg)
