@@ -1,18 +1,8 @@
 import React from 'react'
 import { Formik, Form, Field, FieldArray, ErrorMessage } from 'formik'
-import Dropzone from "react-dropzone"
 import { Button, Label, ErrorSpan,Row } from '../styled-css/product'
 
-const dropzoneStyle = {
-    width: "100%",
-    height: "auto",
-    borderWidth: 2,
-    borderColor: "rgb(102, 102, 102)",
-    borderStyle: "dashed",
-    borderRadius: 5,
-}
-
-const EditProductForm = ({product, updateProduct, onClose}) => {
+const EditProductForm = ({ product, updateProduct, onClose }) => {
 return (
     <div>
         <h1>Edit product: {product.id}</h1>

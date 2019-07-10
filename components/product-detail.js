@@ -1,8 +1,4 @@
-import styled from 'styled-components'
-
-const ProductImg = styled.img`
-    padding-right: 5px
-`
+import { ProductImg } from '../styled-css/product'
 
 const Image = ({ images }) => {
     if (!images) return (<div/>)

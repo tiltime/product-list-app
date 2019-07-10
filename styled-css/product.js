@@ -19,7 +19,9 @@ export const ProductListItem = styled.li`
     list-style: none;
     margin: 5px 0;
 `
-
+export const ProductImg = styled.img`
+    padding-right: 5px
+`
 export const ProductLink = styled.a`
      text-decoration: none;
         color: blue;
