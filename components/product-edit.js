@@ -52,6 +52,15 @@ return (
                                         </div>
                                     ))
                                 }
+                                <div>
+                                    <Label>Add image</Label>
+                                    {/* might use dropzone later */}
+                                    <input id="file" name="file" type="file" onChange={(e) => {
+                                        const url = e.currentTarget.files[0].name //FIX: some url to define
+                                        const name = e.currentTarget.files[0].name
+                                        arrayHelpers.push({url, name})
+                                    }} />
+                                </div>
                             </div>
                             )}
                         />
