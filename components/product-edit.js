@@ -48,6 +48,7 @@ return (
                                             <img src={image.url} />
                                             <Field type="text" name={`images[${i}].url`} />
                                             <Field type="text" name={`images[${i}].name`} />
+                                            <Button type="button" onClick={() => arrayHelpers.remove(i)}>Delete</Button>
                                         </div>
                                     ))
                                 }
