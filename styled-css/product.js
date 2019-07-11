@@ -5,7 +5,7 @@ export const Label = styled.label`
     width: 100px;
 `
 export const Row = styled.div`
-    display: block;
+    display: flex;
     margin: 5px 0;
 `
 export const ErrorSpan = styled.span`
@@ -23,11 +23,19 @@ export const ProductImg = styled.img`
     padding-right: 5px
 `
 export const ProductLink = styled.a`
-     text-decoration: none;
+    text-decoration: none;
         color: blue;
         font-family: 'Arial';
     } 
     &:hover {
         opacity: 0.6;
     }
+`
+export const ImgEditItem = styled.div`
+    vertical-align: baseline;
+    margin-bottom: 5px;
+`
+export const ImgAddItem = styled.div`
+    border: 1px dashed;
+    padding: 5px;
 `

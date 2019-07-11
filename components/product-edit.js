@@ -1,6 +1,6 @@
 import React from 'react'
 import { Formik, Form, Field, FieldArray, ErrorMessage } from 'formik'
-import { Button, Label, ErrorSpan,Row } from '../styled-css/product'
+import { Button, Label, ErrorSpan, Row, ImgEditItem, ImgAddItem, ProductImg  } from '../styled-css/product'
 
 const EditProductForm = ({ product, updateProduct, onClose }) => {
 return (
@@ -44,15 +44,15 @@ return (
                             <div>
                                 {
                                     values.images.map((image, i) => (
-                                        <div key={i}>
-                                            <img src={image.url} />
+                                        <ImgEditItem key={i}>
+                                            <ProductImg src={image.url} />
                                             <Field type="text" name={`images[${i}].url`} />
                                             <Field type="text" name={`images[${i}].name`} />
                                             <Button type="button" onClick={() => arrayHelpers.remove(i)}>Delete</Button>
-                                        </div>
+                                        </ImgEditItem>
                                     ))
                                 }
-                                <div>
+                                <ImgAddItem>
                                     <Label>Add image</Label>
                                     {/* might use dropzone later */}
                                     <input id="file" name="file" type="file" onChange={(e) => {
@@ -60,7 +60,7 @@ return (
                                         const name = e.currentTarget.files[0].name
                                         arrayHelpers.push({url, name})
                                     }} />
-                                </div>
+                                </ImgAddItem>
                             </div>
                             )}
                         />
